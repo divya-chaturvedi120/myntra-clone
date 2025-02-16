@@ -2,6 +2,10 @@
 
 This is a **frontend-only clone** of the Myntra website, built using **HTML and CSS**. The project replicates the UI design, including the navbar, homepage, product sections, and footer.
 
+
+## 🚀 Live Demo  
+🔗 [View Project](https://mynstyle.netlify.app/)  
+
 ## 📌 Features  
 ✅ Fully responsive design  
 ✅ Navbar, homepage, and footer styled like Myntra  
