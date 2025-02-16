@@ -3,17 +3,18 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
-   
 }
 
+/* Navigation Bar */
 .nav-bar {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: white;
+    background-color: rgb(242, 241, 236);
     padding: 10px 20px;
+    position: sticky;
     top: 0;
-    background-color: rgb(242, 241, 236)
+    z-index: 10;
 }
 
 /* Logo */
@@ -56,20 +57,19 @@ body {
     height: 40px;
     border: 1px solid #ddd;
     border-radius: 20px;
-    padding: 5px 40px 5px 15px; /* Leave space for the icon */
+    padding: 5px 40px 5px 15px;
     font-size: 14px;
-  
-    
-   
 }
+
 .search-bar:focus {
     border-color: #ff3e6c;
 }
+
 .search-icon {
     position: absolute;
-    right: 15px; /* Position inside the input */
+    right: 15px;
     top: 50%;
-    transform: translateY(-50%); /* Center vertically */
+    transform: translateY(-50%);
     color: #666;
     font-size: 18px;
     cursor: pointer;
@@ -78,7 +78,7 @@ body {
 /* Icons Section */
 .icons {
     display: flex;
-    gap: 20px;  
+    gap: 20px;
     align-items: center;
 }
 
@@ -98,20 +98,24 @@ body {
     color: #ff3e6c;
 }
 
-/* Header image  */
-#hero-img{
-    height:500px;
+/* Header Image */
+#hero-img {
+    height: 500px;
     width: 100%;
-    
+    object-fit: cover;
 }
-.heading p{
+
+/* Heading */
+.heading p {
     text-align: center;
     font-size: 35px;
     text-transform: uppercase;
     color: rgb(10, 10, 129);
     font-weight: bold;
 }
-.products{
+
+/* Products Section */
+.products {
     display: flex;
     justify-content: center;
     text-align: center;
@@ -119,24 +123,30 @@ body {
     padding: 30px;
     flex-wrap: wrap;
 }
-.items{
+
+.items {
     border: 1px solid rgb(3, 68, 3);
     padding: 5px;
-    background-color:rgb(3, 68, 3);
+    background-color: rgb(3, 68, 3);
     width: 150px;
     overflow: hidden;
     position: relative;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
 }
-.items img{
+
+.items img {
     height: 80%;
     width: 80%;
     object-fit: cover;
-    transition: transform 0.3s ease; 
+    transition: transform 0.3s ease;
 }
-.items img:hover{
+
+.items img:hover {
     transform: scale(1.2);
     cursor: pointer;
 }
+
 .items p {
     color: white;
     margin-top: 10px;
@@ -144,14 +154,8 @@ body {
     font-weight: bold;
     text-transform: uppercase;
 }
-/* Footer Section */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
 
+/* Footer Section */
 footer {
     background-color: #f8f8f8;
     padding: 40px 60px;
@@ -220,13 +224,113 @@ footer {
     color: #ff3f6c;
 }
 
+/* Mobile and Tablet Responsive */
 @media (max-width: 768px) {
-    .footer-container {
-        flex-direction: column;
+    /* Nav Links */
+    .nav-links {
+        display: none; /* Hide on small screens */
     }
     
+    /* Logo */
+    .myntra-logo {
+        width: 50px;
+    }
+    
+    /* Search Bar */
+    .search-bar-wrapper {
+        flex: 1;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .search-bar {
+        width: 80%;
+    }
+
+    /* Icons */
+    .icons {
+        gap: 10px;
+    }
+
+    /* Products */
+    .products {
+        padding: 20px;
+        justify-content: center;
+    }
+
+    .items {
+        width: 45%; /* Increase width to fit better on smaller screens */
+    }
+
+    /* Footer */
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
     .footer-section {
         width: 100%;
         margin-bottom: 20px;
+    }
+
+    .app-links img {
+        width: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Adjust for smaller screens */
+    .nav-bar {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .nav-links {
+        display: block;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .nav-links a {
+        margin: 5px 0;
+        font-size: 16px;
+    }
+
+    .search-bar-wrapper {
+        flex: 1;
+        justify-content: space-between;
+    }
+
+    .search-bar {
+        width: 100%;
+    }
+
+    .icons {
+        display: none;
+    }
+
+    /* Products */
+    .products {
+        gap: 10px;
+        padding: 20px;
+    }
+
+    .items {
+        width: 100%; /* Make items take up full width */
+    }
+
+    /* Footer */
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .social-links {
+        margin-top: 15px;
     }
 }
